@@ -39,16 +39,16 @@ RSpec.describe 'Budget Totals API', type: :request do
     context 'when the request is valid' do
       before(:each) { post "/api/v1/budgets/#{budget_id}/budget_totals", params: { budget_total: valid_attributes } }
 
-      it 'returns status code 200' do
-        expect(response).to have_http_status(200)
+      it 'returns status code 201' do
+        expect(response).to have_http_status(201)
       end
     end
 
     context 'when the request is invalid' do
       before(:each) { post "/api/v1/budgets/#{budget_id}/budget_totals", params: { budget_total: invalid_attributes } }
 
-      it 'returns status code 422' do
-        expect(response).to have_http_status(422)
+      it 'returns status code 204' do
+        expect(response).to have_http_status(204)
       end
     end
   end
