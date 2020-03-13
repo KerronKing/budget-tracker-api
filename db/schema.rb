@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 2020_03_03_133906) do
 
   create_table "budgets", force: :cascade do |t|
     t.string "name"
-    t.date "start_date"
-    t.date "end_date"
+    t.date "startdate"
+    t.date "enddate"
     t.integer "income"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
