@@ -9,9 +9,9 @@ RSpec.describe Budget, type: :model do
   end
   let(:budget) do
     user.budgets.build(name: 'March budget',
-                                    startdate: '03-01-2020',
-                                    enddate: '31-01-2020',
-                                    income: 7000)
+                       startdate: '03-01-2020',
+                       enddate: '31-01-2020',
+                       income: 7000)
   end
 
   it 'should not be blank' do
