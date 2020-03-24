@@ -16,7 +16,19 @@ This app was built using the following:
 ## Getting Started
 
 * Open the terminal and clone the repo
-* Launch the rails server (with the 'rails s' command)
+* cd into the project directory and launch the rails server with the following command:
+
+```
+rails s
+```
+
+## Testing
+
+* cd into the project directory and run the testing suite with the following command:
+
+```
+bundle exec rspec
+```
 
 ## Contributing
 
