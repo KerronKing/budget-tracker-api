@@ -7,8 +7,8 @@ RSpec.describe 'Budgets API', type: :request do
                         password: '123456',
                         password_confirmation: '123456')
     @budget = @user.budgets.build(name: 'March budget',
-                                  start_date: '2020-03-01',
-                                  end_date: '2020-03-31',
+                                  startdate: '2020-03-01',
+                                  enddate: '2020-03-31',
                                   income: 7000)
     @budget.save
   end
@@ -52,8 +52,8 @@ RSpec.describe 'Budgets API', type: :request do
     let(:valid_attributes) do
       {
         name: 'March budget',
-        start_date: '2020-03-01',
-        end_date: '2020-03-31',
+        startdate: '2020-03-01',
+        enddate: '2020-03-31',
         income: 7000
       }
     end
@@ -61,8 +61,8 @@ RSpec.describe 'Budgets API', type: :request do
     let(:invalid_attributes) do
       {
         name: '',
-        start_date: '',
-        end_date: '',
+        startdate: '',
+        enddate: '',
         income: ''
       }
     end
@@ -77,7 +77,7 @@ RSpec.describe 'Budgets API', type: :request do
       end
 
       it 'creates a budget' do
-        expect(json['start_date']).to eq('2020-03-01')
+        expect(json['startdate']).to eq('2020-03-01')
       end
 
       it 'returns status code 201' do
