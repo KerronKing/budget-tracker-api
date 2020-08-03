@@ -2,7 +2,8 @@ class Api::V1::BudgetsController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @budgets = Budget.where('user_id = ?', current_user.id)
+    @user = current_user
+    @budgets = @user.budgets
     render json: @budgets
   end
 
